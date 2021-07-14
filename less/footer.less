@@ -1,0 +1,74 @@
+//footer
+footer {
+  width: 100%;
+  background: @footer-color;
+  color: lighten(@text-color, 100%);
+  #offset > .margin(25px 0 0 0);
+
+  .main-footer {
+    background: url("@{url-img}/iran.png") no-repeat bottom left;
+    width: 75%;
+    display: flex;
+    align-items: stretch;
+    #offset > .margin(0 auto);
+    #offset > .padding(20px 10px);
+
+    .right, .center {
+      width: 33%;
+    }
+
+    .left {
+      width: 30%;
+
+      p {
+        #offset> .padding(40px 0 0 0);
+        font-size: (@font-size)-3px;
+      }
+    }
+
+    .center {
+      border-right: 1px solid @line;
+      border-left: 1px solid @line;
+      margin-left: 15px;
+    }
+  }
+
+
+
+  li {
+    border-bottom: 1pt solid @line;
+    margin: 3px 10px 0 20px;
+
+    a {
+      color: lighten(@text-color, 100%);
+      font-size: (@font-size)-3px;
+      display: block;
+      #offset > .padding(5px 0);
+      position: relative;
+
+      &:hover {
+        color: lighten(@them-color, 5%);
+      }
+      span{
+        position: absolute;
+        left: 0px;
+      }
+    }
+  }
+
+  h5 {
+    color: lighten(@them-color, 5%);
+  }
+
+
+
+
+  .footer-black {
+    #offset > .text-align();
+    font-size: (@font-size)-4px;
+    color: lighten(@text-color, 100%);
+    background: darken(@footer-color, 100%);
+    #offset > .padding(20px 0)
+  }
+
+}

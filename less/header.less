@@ -1,0 +1,60 @@
+//header
+header {
+  width: percentage(1);
+  height: 70px;
+  background: @bgcolor;
+  border-bottom: 3px solid @them-color;
+  .center();
+  .logo {
+    width: 70px;
+    height: 30px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  ul.nav {
+    display: inline;
+    li {
+      display: inline;
+      #offset> .margin(0 10px);
+      a {
+        #offset> .margin(0 10px);
+        font-size: floor((@font-size)-2px);
+        &:hover {
+          color: lighten(fadeout(@them-color,45%), 15%);
+        }
+        i{
+          #offset > .padding(0 2px);
+          #offset > .margin(0 2px);
+          font-size: round((@font-size)-2px);
+        }
+      }
+    }
+  }
+
+  button.icon-search {
+    background: darken(@bgcolor, 15%);
+    #offset > .margin(0 10px 0 0);
+    #offset > .padding(0 3px);
+    .bdrs(6px);
+
+    input {
+      width: (@width-input)-80px;
+      outline: none;
+      border: none;
+      background: darken(@bgcolor, 15%);
+    }
+  }
+}
+.active{
+  color: @hover-menu-color;
+}
+label#hamb{
+  margin-right: 40px;
+  font-size:ceil(26px);
+  line-height: 70px;
+  display: none;
+}
+#chk{display: none;}
+

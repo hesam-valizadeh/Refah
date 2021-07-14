@@ -1,0 +1,99 @@
+//public-mixin
+
+//mixin
+
+.user-select() {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.center() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.active(){
+  color: @them-color;
+}
+.sq(){
+  width: 15px;
+  height: 15px;
+  background: @them-color;
+  float: right;
+  #offset > .margin(10px 0 0 15px);
+}
+.section(){
+  width: 70%;
+  background: @bgcolor;
+  .bdrs(5px);
+  #offset > .margin(10px auto);
+  #offset > .padding(20px);
+}
+
+
+
+//mixin name space
+
+#offset() {
+  .padding(@p:10px) {
+    padding: @p;
+  }
+  .margin(@m:5px) {
+    margin: @m;
+  }
+  .text-align(@ta:center) {
+    text-align: @ta;
+  }
+  .float(@r:right) {
+    float: @r;
+  }
+
+}
+
+#anim() {
+  .transform(@transform) {
+    transform: @transform;
+  }
+  .transition(@trans) {
+    -webkit-transition: @trans;
+    -moz-transition: @trans;
+    -ms-transition: @trans;
+    -o-transition: @trans;
+    transition: @trans;
+  }
+}
+
+
+
+//defult parametric mixin model one
+
+.bdrs(@bdrs) {
+  -webkit-border-radius: @bdrs;
+  -moz-border-radius: @bdrs;
+  border-radius: @bdrs;
+}
+//defult parametric mixin model two
+.items(@width:300px,@height:60px,@background:white,@color:black) {
+  width: @width;
+  height: @height;
+  background: @background;
+  color: @color;
+  .bdrs(4px);
+}
+
+
+
+//arguments mixin
+.box-shadow(@x:2px,@y:2px,@blur:2px,@color:#ccc){
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -o-box-shadow: @arguments;
+}
+
+//mixin multiply value
+.border(@w:1px,@type:solid,@color:black){
+  border: @w @type @color;
+}
